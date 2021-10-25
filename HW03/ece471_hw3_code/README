@@ -1,0 +1,42 @@
+ECE471 Fall 2020 -- Homework #3
+
+Name: John Bowen
+
+
+3c: size of ARM32 function: 112 bytes
+	End mem addr (0x1048c) - Start mem addr (0x1041c) = 0x70 = 112 bytes
+
+3d: size of THUMB2 function: 84 bytes
+	End mem addr (0x10468) - Start mem addr (0x10414) = 0x54 = 84 bytes
+
+3e: The machine language instructions for THUMB2 are 16-bit, for example, '652c'. The ARM32 instructions are 32-bit, for example, '4076a342'.
+
+
+4a: After running '$ strip integer_print' and '$ strip integer_print.thumb2' the sizes of the executables are:
+	integer_print: 	      5544 bytes
+	integer_print.thumb2: 5548 bytes 
+
+4b: After running '$ strip integer_print_asm' the size of the executable is:
+	integer_print_asm:    536 bytes
+
+4c: In a space constrained system assembly language would be better as the executable is a lot smaller then that of C language.  
+
+4d: Although assembly is a more size-efficient language, C is easier to write in.
+
+
+
+5f: code that caused the crash
+	9   ch=array[i]
+
+5h: assembly code at the crash
+	0x0001042c <+36>:	ldrb	r3, [r3]
+5i: cause of the crash
+	The cause of the crash was passing NULL to the function 'print_all_chars_in_string(char *array)', which tried to iterate over NULL. 	
+
+
+6: describe your something cool
+	I modified 'integer_print.extra.c' to prompt the user to enter an integer. This integer is then passed to 'print_integer()'.
+
+
+7a:
+	From running '$ man cal', the bug represents the switch form the Julian calendar to the Gregorian calendar on Sep. 2, 1752, which is actually 'historically naive' for many countries. 

@@ -1,0 +1,17 @@
+1a) The Raspberry Pi 2 has the lowest under-load power draw (3.4W).
+
+1b) The Macbook Air consumes the least amount of energy (407J).
+
+1c) The Macbook Air computes the result the fastest (14s).
+
+2) Considering a case of taking a picture once every 60 seconds, then performing a matrix-multiply similar to the one in the benchmark, only the Jetson-TX1 and Macbook Air could meet this deadline as the time for them to compute a matrix multiply is 47s and 14s respectively.
+
+3a) Over an hour, the total energy usage of the Jetson TX-1 is calculated to be:
+	(total energy)/minute = (47s*13.4W) + (13s*2.1W) = 657J
+	(total energy)/hour = 60s*657J = 39426J
+
+3b) Over an hour, the total energy usage of the Macbook Air is calculated to be:
+	(total energy)/minute = (46s*10W) + (14s*29.1W) = 867J
+	(total energy)/hour = 60s*867W = 52044J
+
+4) I would choose the Jetson-TX1 to run off a battery, as it consumes the least amount of energy per hour.

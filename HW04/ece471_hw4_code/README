@@ -1,0 +1,53 @@
+ECE 471 Fall 2020 -- Homework 4
+
+Name: John Bowen
+
+
+Briefly describe what you did for something cool (if applicable):
+	For something cool, I did the first suggestion, having the switch toggle the LED on and off.
+I used a wire as the switch. When it pulled the circuit up to 3.3V (switch closed) it sent a '1' to GPIO18,
+turning the LED on, and when I disconnected the wire (switch open) it sent a '0' to GPIO18, turning the
+LED off.
+
+
+Answers to Question #5:
+
+a. To delay, using 'usleep()' is better than a busy loop because the integers chosen in a busy loop won't
+   result in the same time delay across different systems. For example, a 'for' loop on the RPi will
+   execute faster than a 'for' loop on an STM board. That is why having a unit associated with your
+   delay is better. Also the compiler may optimize a busy loop, having the delay not do what was expected.
+ 
+b. Having an OS makes life easier when programming GPIOs because it provides a layer of abstraction from
+   the hardware. This can make a software program work on different hardware that shares the same interface.
+   Also, an OS provides a layer of abstraction from the software, specifically in memory. An OS uses VM to
+   have a program achieve the same system call across any system. The OS handles all of the
+   IRQs, I/O, printing, and device drivers.
+
+c. The debouncing of the switch was handled by constantly comparing the previoius input value to the
+   current input value. If they were not equivalent a delay of 50msec occurs, followed by another test of
+   that 'previous' value with the 'new' current input value, if these were again not equivalent, then there
+   was a switch change. 
+
+Answers to Question #6:
+
+a. Machine type:
+	Raspberry Pi 3 Model B Rev 1.2
+
+b. Kernel version:
+	5.4.51-v7+
+
+c. Free Disk space:
+	
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        15G  8.8G  4.9G  65% /
+devtmpfs        431M     0  431M   0% /dev
+tmpfs           463M     0  463M   0% /dev/shm
+tmpfs           463M  6.3M  457M   2% /run
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           463M     0  463M   0% /sys/fs/cgroup
+/dev/mmcblk0p1  253M   54M  199M  22% /boot
+tmpfs            93M     0   93M   0% /run/user/1000v
+
+d.
+	The '-h' option of the df command prints the disk space sizes in powers of 1024.
+	

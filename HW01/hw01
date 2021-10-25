@@ -1,0 +1,27 @@
+
+1.
+a)   Yes, I would describe this as an embedded system, because it:
+	- is embedded or 'inside of' the electric toothbrush
+	- has has a specific purporse, being to control the electric toothbrush
+	- is resource constrained, consisting of an 8-bit MC with limited memory.
+
+b)   No, I would not describe this as an embedded system. The iPhone 11 is too 'general purpose' to be classified as an embedded system (does not have a fixed purpose), it is also not
+     embedded within another system.
+
+c)   Yes, I would describe this as an embedded system, because it:
+	- is embedded or 'inside of' the microwave
+	- is constrained to only an LED display, keypad, and some circuitry to operate the fans and magnetron
+	- is constrained to 'real-time', as the system will have to control the microwave directly after user-input.
+
+
+
+2.
+a)   Since the registers, integer ALU, program-counter, and address bus are all 32-bits, the ARM 1176 is 32-bits wide or a 32-bit processor.
+
+b)   The MOS 6502 is an 8-bit processor since its registers, data bus, and ALU are all 8-bits, but its PC and address buses are both 16-bit as an 8-bit address bus would only have 256 bytes of RAM (too limiting). So the 8-bit processor has a 16-bit address bus which is 64 kilobytes of RAM.
+
+
+3.
+a)   When designing an embedded system, using an ASIC (application-specific integrated circuit) over a microcontroller might be better because an ASIC would be 'stream-lined' for the specific system, wasting no real-estate  or real-time on unused registers, logic, etc.
+
+b)   On the other hand, using a microcontroller over an ASIC might be better because it is easier to debug. Debugging an ASIC would mean having to either redesign and remanufacture (if need to debug many of the same ASIC) or having to resolder a wire, pin, etc. Debugging a microcontroller would be much quicker, as it would just be a software fix followed by a firmware update.

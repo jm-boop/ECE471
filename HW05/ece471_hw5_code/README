@@ -1,0 +1,22 @@
+ECE471 HW5 -- Fall 2020
+
+Name: John Bowen
+
+
+7.	Describe what your "something cool" code does
+	My something cool was displaying 'ECE 471' on the display, having it scroll from right to left. 
+
+8.
+ a). Pre-RPi4, the GPU is in charge of the initial boot process. This is unusual for ARM boards.  
+ b). The '/boot' partition on the RPi is a FAT32 filesystem because it is simple and low-memory (easy 
+     for bootloader).
+ c). The generic name for the code/program responsible for loading the OS is the 'bootloader'.
+ d). After running 'i2cdetect', addresses 0-2 and 0x78-0x7f are not scanned because they are reserved for
+     other components.
+
+9.
+ a). 94 detect_final.c 
+ b). 45 lines 
+
+
+

@@ -1,0 +1,26 @@
+ECE471 Fall 2020 -- HW8
+
+Name: John Bowen
+
+
+3. Describe your something cool:
+	My something cool was the easy method of converting the temperature to Fahrenheit and Kelvin,
+	and displaying it along with the Celsius reading.
+
+
+4. a. We powered the DS18B20 sensor with the external power supply of +3.3V so that we didn't need 
+      an external MOSFET pullup in order to assure sufficient supply current to the sensor when temperature
+      conversions are taking place.
+   b. If I wanted to connect my pi to a temperature probe 100 yards away, I would choose the 1-wire interface
+      because bus wires can go up to 300m, while SPI and I2C busses can only be a few meters.
+
+
+5. a. 
+
+#!/bin/sh
+
+# My first shell script
+echo "This is my first shell script!"
+
+
+

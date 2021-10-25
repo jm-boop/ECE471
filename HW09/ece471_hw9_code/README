@@ -1,0 +1,27 @@
+ECE471 HW9 -- Fall 2020
+
+Name: John Bowen
+
+Number on side of the LED display: 26
+
+4. Test inputs: 
+	0, 50.0, 99.9 - These are the end cases and middle case for when the temp is in between 0 and 99.9 degrees. (Make sure display shows two digits to left of decimal and one to the right)
+	100, 500,  999 - These are the end cases and middle case for when the temp is in between 100 and 999. (Make sure display shows three digits)
+	-99.9, -50.0, -0 - These are the end cases and middle case for when the temp is in between -99.9 and 0. (Make sure display shows neg. sign, two digits to left of decimal and one to the right).
+	-1000, 1000 - These are invalid temperatures when the display should show "Err".
+	01.2, 1.2 - These are to test that the display doesn't show leading zeros.
+	1, 2, 3 - These are integers to the nearest digit (to make sure the display shows one digit to the right of the decimal, and a zero to the right of the decimal).
+
+7:
+  a. One example of poorly written embedded code that had disastrous results was the Yorktown smart ship - someone entered a 0 in a field which led to a divide by 0 error which ultimately crashed the ship.
+  b. It's a good idea to always try your best with writing correct, well documented, and well tested code because it helps strengthen the habit for when it comes time to actually write professional code that 
+     could have the consequences of someone losing their life.
+8.
+  a.
+	$ touch --date "1966-12-1 14:30" fakedate
+  b. 
+  c.
+	Anyone is able to change the modified date of a file by using the command above. This is why a student saying 'check the file timestamp' is not the most convincing argument.
+	P.S. This is ironic since this assignment is being turned in late! 
+
+

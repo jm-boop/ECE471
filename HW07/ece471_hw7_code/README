@@ -1,0 +1,53 @@
+ECE471 Fall 2020 -- HW7
+
+Name: John Bowen
+
+4. Describe your something cool:
+	My something cool was monitoring 10 seconds or readings of temperature
+data, and printing the high/low temperatures recorded. This was done by taking
+a 'reference' temperature reading in a while loop, then comparing the 'last'
+min and max temp reading with the current one.
+
+5. a. A specification of brakes starting to pulse within 10ms is a HARD
+      real-time task. If this specification was not met, a person driving the
+      vehicle could get into a car accident and possibly lose their life.
+   b. A specification of having the 'tune' button on the stereo switch
+      stations within 1ms is a SOFT real-time task. If the specification was
+      not met, the switching of the station >1ms would still be a 'useful'
+      result, simply not time-efficient for the user.
+   c. A specification of having a video decoder to be able to maintain a
+      framerate of 60Hz is a FIRM real-time task. If the specification
+      was not met, movies would be out of sync and no longer useful to 
+      the user.
+   d. One disadvantage of SPI compared to I2C is that there are more pins to
+      connect between devices (6 compared to 4 wires).
+   e. One advantage of SPI over I2C is that SPI is potentially faster being
+      full-duplexed (transmit and receive data simultaneously).
+   f. Connecting a second TMP36 to the MCP3008 via SPI interface with a 150-
+      foot cable would NOT work. This is because after about 10m of wire
+      length, there is attenuation in the MISO, MOSI, and SCK lines due to
+      increased resistance of the wires.
+   g. Controlling the pins' clock speed from userspace to 'bit-bang' SPI via
+      GPIO won't work to achieve interface with the MCP3008. The GPIO pins
+      can not provide a stable clock frequency from user-space.  
+
+6. a. When you pipe a command to '/dev/null', for example:
+            $ ls > /dev/null
+      Nothing is outputed to the terminal since the 'stdout' of that
+      command is 'thrown out' into /dev/null. Say for exmaple we did the command:
+            $ ls 2> /dev/null
+      The regular output for 'ls' is shown since we are 'throwing out' any 
+      'stderrs' to the terminal.
+   b. Running the command:
+            $ ls > /dev/full
+      Ouputs:
+            $ ls: write error: No space left on device
+      This lets us see how the 'ls' program reacts to a full device.	 
+   c. The '/dev/zero' device would be useful to provide steam of NULL characters
+      to initialize data storage.
+   d. I would guess '/dev/random' contains an endless supply of random
+      characters.
+      What it actually is:
+      It is a 'random number generator' that when accessed, uses device noise to
+      return random numbers. 
+
